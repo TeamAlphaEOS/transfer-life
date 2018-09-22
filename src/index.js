@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
 import 'semantic-ui-css/semantic.min.css';
 import "./index.css";
-import Form from "./components/Form";
+import App from "./App";
 import registerServiceWorker from "./registerServiceWorker";
 import store from './store';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Form />
+    <App />
   </Provider>,
   document.getElementById("root")
 );
