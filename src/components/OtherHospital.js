@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Divider, Segment, Progress, Button, Header } from 'semantic-ui-react'
+import { ToastContainer, toast } from 'react-toastify';
+
+const notify = () => toast("Patient sent successfully");
 
 class OtherHospital extends Component {
     render() {
         return (
             <div>
-            <div style={{height: 10}}/>
+            <div style={{ marginTop: 10 }}/>
             <div style={styles.container}>
                 <Header size='large'>Hospitals around Hyde Park</Header>
             </div>
@@ -19,7 +22,7 @@ class OtherHospital extends Component {
                 available beds
              </Progress>
              <div style={styles.container}>
-                <Button basic>send patients</Button>
+                <Button onClick={notify} basic>send patients</Button>
              </div>
              <Divider section />
 

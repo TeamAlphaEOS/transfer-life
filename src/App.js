@@ -5,9 +5,12 @@ import {
   Route,
   Link
 } from 'react-router-dom'
+import { ToastContainer, toast } from 'react-toastify';
 import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form';
+import Dashboard from './components/Dashboard';
+import OtherHospital from './components/OtherHospital';
 
 class App extends Component {
   render() {
@@ -49,9 +52,11 @@ class App extends Component {
           />
         </Container>
       </Menu>
+      <ToastContainer />
 
       <Route path="/form" component={Form}/>
-      <Route path="/dashboard" component={() => <h1>Test</h1>}/>
+      <Route path="/dashboard" component={Dashboard}/>
+      <Route path="/otherhospital" component={OtherHospital} />
       </div>
     </Router>
     );

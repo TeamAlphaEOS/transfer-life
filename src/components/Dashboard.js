@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { Divider, Segment, Progress, Button, Header } from 'semantic-ui-react'
+import { Divider, Segment, Progress, Button, Header, Modal } from 'semantic-ui-react'
+import OtherHospital from './OtherHospital';
 
 class Dashboard extends Component {
     render() {
         return (
-            <div>
-            <div style={[styles.container, { bottom: 10 }]}>
+            <div style={{ marginTop: 70 }}>
+            <div style={styles.container}>
                 <Header size='large'>Current status of EOS Hyde Park Hospital</Header>
             </div>
             <Segment>
@@ -19,8 +20,14 @@ class Dashboard extends Component {
             <Progress percent={60} active>
                 Active
              </Progress>
-             <div style={styles.container}>
-                <Button basic>send patients</Button>
+             <div style={styles.container}>            
+                <Modal closeIcon trigger={<Button basic>send patients</Button>}>
+                    <Modal.Content image>
+                    <Modal.Description>
+                        <OtherHospital />
+                    </Modal.Description>
+                    </Modal.Content>
+                </Modal>
              </div>
              <Divider section />
             <Progress percent={10} success progress>
