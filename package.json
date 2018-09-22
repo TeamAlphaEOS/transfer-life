@@ -5,7 +5,6 @@
   "dependencies": {
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-<<<<<<< HEAD
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.5",
@@ -15,10 +14,6 @@
     "semantic-ui-css": "^2.4.0",
     "semantic-ui-react": "^0.82.5",
     "yarn": "^1.9.4"
-=======
-    "react-scripts": "1.1.5",
-    "semantic-ui-react": "^0.82.5"
->>>>>>> .
   },
   "scripts": {
     "start": "react-scripts start",
