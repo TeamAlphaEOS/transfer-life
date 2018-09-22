@@ -6020,12 +6020,15 @@ selfsigned@^1.9.1:
   dependencies:
     node-forge "0.7.5"
 
+<<<<<<< HEAD
 semantic-ui-css@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/semantic-ui-css/-/semantic-ui-css-2.4.0.tgz#b9b9349a3eb2394701049713cafd1929151c61fb"
   dependencies:
     jquery x.*
 
+=======
+>>>>>>> .
 semantic-ui-react@^0.82.5:
   version "0.82.5"
   resolved "https://registry.yarnpkg.com/semantic-ui-react/-/semantic-ui-react-0.82.5.tgz#3bc098a0b22d3a76d8d7fb020dee07311bc2784f"
