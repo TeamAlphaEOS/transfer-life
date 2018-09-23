@@ -4,6 +4,15 @@ import { Container, Form, Checkbox, Segment, Label, Button, Header } from 'seman
 
 const questions = [
   {
+    text: 'User ID',
+    component: ({ label, ...other }) => (
+      <Form.Field>
+        <Label ribbon>{label}</Label>
+        <Form.Input {...other} />
+      </Form.Field>
+    )
+  },
+  {
     text: 'Are you in pain?',
     component: ({ label, ...other }) => (
       <Form.Field>
@@ -105,31 +114,25 @@ const questions = [
 ]
 
 let ContactForm = props => {
-  const { handleSubmit } = props
+  const { handleSubmit } = props;
   return (
-    <Container style={{
-      marginTop: '120px',
-      padding: '50px',
-    }}>
-      <Header style={{ textAlign: 'center' }} as='h1'>Questionnaire</Header>
-      <Form
-        onSubmit={handleSubmit}>
-        {questions.map((q, i) => (
-          <Form.Group key={i}>
-            <Segment vertical>
-              <Field label={q.text} name={q.text} component={q.component} />
-            </Segment>
-          </Form.Group>
-        ))}
-        <Button type="submit">Submit</Button>
-      </Form>
-    </Container>
+    <Form
+      onSubmit={handleSubmit}>
+      {questions.map((q, i) => (
+        <Form.Group key={i}>
+          <Segment vertical>
+            <Field label={q.text} name={q.text} component={q.component} />
+          </Segment>
+        </Form.Group>
+      ))}
+      <Button onClick={handleSubmit} type="submit">Submit</Button>
+    </Form>
   )
 }
 
 ContactForm = reduxForm({
   // a unique name for the form
-  form: 'form'
+  form: 'Questions',
 })(ContactForm)
 
 export default ContactForm

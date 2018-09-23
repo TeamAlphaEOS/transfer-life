@@ -5,14 +5,15 @@ import {
   Progress,
   Button,
   Header,
-  Modal
+  Modal,
+  Container
 } from "semantic-ui-react";
 import OtherHospital from "./OtherHospital";
 
 class Dashboard extends Component {
   render() {
     return (
-      <div style={{ marginTop: 120 }}>
+      <Container style={{ marginTop: 120 }}>
         <div style={styles.container}>
           <Header size="large">Current status of EOS Hyde Park Hospital</Header>
         </div>
@@ -69,7 +70,7 @@ class Dashboard extends Component {
             </Modal>
           </div>
         </Segment>
-      </div>
+      </Container>
     );
   }
 }
