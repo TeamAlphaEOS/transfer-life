@@ -15,10 +15,10 @@ class OtherHospital extends Component {
 
             <Segment>
             <h3>Islington</h3>
-            <Progress percent={30} success progress>
+            <Progress percent={30} indicating progress>
                 staff patient capacity
              </Progress>
-            <Progress percent={50} success progress>
+            <Progress percent={70} indicating progress>
                 available beds
              </Progress>
              <div style={styles.container}>
@@ -27,10 +27,10 @@ class OtherHospital extends Component {
              <Divider section />
 
             <h3>Kensington</h3>
-            <Progress percent={70} warning progress>
+            <Progress percent={70} indicating progress>
                 staff patient capacity
              </Progress>
-            <Progress percent={80} error progress>
+            <Progress percent={30} indicating progress>
                 available beds
              </Progress>
              <div style={styles.container}>
@@ -39,10 +39,10 @@ class OtherHospital extends Component {
              <Divider section />
 
             <h3>Westminster</h3>
-            <Progress percent={75} warning progress>
+            <Progress percent={75} indicating progress>
                 staff patient capacity
              </Progress>
-            <Progress percent={82} error progress>
+            <Progress percent={82} indicating progress>
                 available beds
              </Progress>
              <div style={styles.container}>
@@ -51,10 +51,10 @@ class OtherHospital extends Component {
              <Divider section />
 
             <h3>Hackney</h3>
-            <Progress percent={90} error progress>
+            <Progress percent={5} indicating progress>
                 staff patient capacity
              </Progress>
-            <Progress percent={95} error progress>
+            <Progress percent={95} indicating progress>
                 available beds
              </Progress>
              <div style={styles.container}>

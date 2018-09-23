@@ -8,22 +8,7 @@ const questions = [
     component: ({ label, ...other }) => (
       <Form.Field>
         <Label ribbon>{label}</Label>
-        <Form.Field>
-          <Checkbox
-            radio
-            label='Yes'
-            name='checkboxRadioGroup'
-            value='yes'
-          />
-        </Form.Field>
-        <Form.Field>
-          <Checkbox
-            radio
-            label='No'
-            name='checkboxRadioGroup'
-            value='no'
-          />
-        </Form.Field>
+        <Form.Input {...other} />
       </Form.Field>
     )
   },

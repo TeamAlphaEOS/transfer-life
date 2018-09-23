@@ -17,7 +17,7 @@ class Dashboard extends Component {
           <Header size="large">Current status of EOS Hyde Park Hospital</Header>
         </div>
         <Segment>
-          <Progress success percent={60} active progress>
+          <Progress indicating percent={75} active progress>
             staff patient capacity
           </Progress>
           <div style={styles.container}>
@@ -30,7 +30,7 @@ class Dashboard extends Component {
             </Modal>
           </div>
           <Divider section />
-          <Progress success percent={50} active progress>
+          <Progress indicating percent={50} active progress>
             Active
           </Progress>
           <div style={styles.container}>
@@ -43,7 +43,7 @@ class Dashboard extends Component {
             </Modal>
           </div>
           <Divider section />
-          <Progress error percent={10} success progress>
+          <Progress indicating percent={10} progress>
             emergency staff available on demand
           </Progress>
           <div style={styles.container}>
@@ -56,7 +56,7 @@ class Dashboard extends Component {
             </Modal>
           </div>
           <Divider section />
-          <Progress warning percent={40} active progress>
+          <Progress indicating percent={40} active progress>
             medical devices in use
           </Progress>
           <div style={styles.container}>
