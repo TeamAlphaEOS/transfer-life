@@ -3,7 +3,7 @@ import { Divider, Segment, Progress, Button, Header } from 'semantic-ui-react'
 import { ToastContainer, toast } from 'react-toastify';
 import Eos from 'eosjs';
 
-const notify = () => toast.info("Patient sent successfully");
+const notify = () => toast.info("Patient data sent successfully");
 
 const chain = {
   main: "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906", // main network
@@ -28,7 +28,7 @@ class OtherHospital extends Component {
   // generic function to handle form events (e.g. "submit" / "reset")
   // push transactions to the blockchain by using eosjs
   async handleFormEvent(event) {
-    eos.contract('eosio').then(eosio => eosio.storepers(1, "eosio", "asdfs", "akey", {'authorization': "eosio@active"}));
+    eos.contract('eosio').then(eosio => eosio.storepers(1, "eosio", "ENCRYPTED_DATA", "akey", {'authorization': "eosio@active"}));
     this.getTable();
   }
 
@@ -40,7 +40,7 @@ class OtherHospital extends Component {
     })
   }
 
-  button = () => <Button onClick={this.click} basic>send patients</Button>;
+  button = () => <Button onClick={this.click} basic>allocate patients</Button>;
     render() {
         return (
             <div>
@@ -97,20 +97,6 @@ class OtherHospital extends Component {
                 {this.button()}
              </div>
              <Divider section />
-
-          <h3>Hackney</h3>
-          <Progress percent={5} indicating progress>
-            staff patient capacity
-          </Progress>
-          <Progress percent={95} indicating progress>
-            available beds
-          </Progress>
-          <div style={styles.container}>
-            <Button onClick={notify} basic>
-              send patients
-            </Button>
-          </div>
-          <Divider section />
         </Segment>
       </div>
     );
