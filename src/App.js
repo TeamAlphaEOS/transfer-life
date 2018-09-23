@@ -6,7 +6,7 @@ import {
   Link
 } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css';
 import Form from './components/Form';
 import Dashboard from './components/Dashboard';
@@ -17,39 +17,32 @@ class App extends Component {
     return (
       <Router>
       <div>
-        <Menu style={{
-          background: '#009688',
+        <Menu
+        style={{
         }}
-        fixed='top' inverted size="huge">
+        fixed='top'
+        size='large'>
         <Container>
-          <Menu.Item as='a' header>
-            <Image size='mini' src='/logo.png' style={{ marginRight: '1.5em' }} />
+          <Menu.Item header>
+            <Image size='tiny' src={logo} />
             Transfer Life
           </Menu.Item>
-          <Menu.Item as={() =>
             <Link
               style={{
-              color: 'white',
               margin: 'auto 0',
               textDecoration: 'none',
-              padding: '10px',
             }}
               to="/form">
-              Form (Doctors)
-            </Link>}
-          />
-          <Menu.Item as={() =>
+            <Menu.Item>Form (Doctors)</Menu.Item>
+          </Link>
             <Link
               style={{
-              color: 'white',
               margin: 'auto 0',
               textDecoration: 'none',
-              padding: '10px',
             }}
               to="/dashboard">
-              Dashboard (Management)
-            </Link>}
-          />
+              <Menu.Item>Dashboard (Management)</Menu.Item>
+            </Link>
         </Container>
       </Menu>
       <ToastContainer />

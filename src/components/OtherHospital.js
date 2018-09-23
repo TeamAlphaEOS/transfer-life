@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Divider, Segment, Progress, Button, Header } from 'semantic-ui-react'
 import { ToastContainer, toast } from 'react-toastify';
 
-const notify = () => toast("Patient sent successfully");
+const notify = () => toast.info("Patient sent successfully");
 
 class OtherHospital extends Component {
     render() {
@@ -34,7 +34,7 @@ class OtherHospital extends Component {
                 available beds
              </Progress>
              <div style={styles.container}>
-                <Button basic>send patients</Button>
+                <Button onClick={notify} basic>send patients</Button>
              </div>
              <Divider section />
 
@@ -46,7 +46,7 @@ class OtherHospital extends Component {
                 available beds
              </Progress>
              <div style={styles.container}>
-                <Button basic>send patients</Button>
+                <Button onClick={notify} basic>send patients</Button>
              </div>
              <Divider section />
 
@@ -58,7 +58,7 @@ class OtherHospital extends Component {
                 available beds
              </Progress>
              <div style={styles.container}>
-                <Button basic>send patients</Button>
+                <Button onClick={notify} basic>send patients</Button>
              </div>
              <Divider section />
 

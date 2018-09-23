@@ -1,6 +1,6 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form'
-import { Form, Checkbox, Segment, Label, Button, Header } from 'semantic-ui-react'
+import { Container, Form, Checkbox, Segment, Label, Button, Header } from 'semantic-ui-react'
 
 const questions = [
   {
@@ -122,11 +122,11 @@ const questions = [
 let ContactForm = props => {
   const { handleSubmit } = props
   return (
-    <div style={{
-      marginTop: '50px',
+    <Container style={{
+      marginTop: '120px',
       padding: '50px',
     }}>
-      <Header as='h1'>Questionnaire</Header>
+      <Header style={{ textAlign: 'center' }} as='h1'>Questionnaire</Header>
       <Form
         onSubmit={handleSubmit}>
         {questions.map((q, i) => (
@@ -138,7 +138,7 @@ let ContactForm = props => {
         ))}
         <Button type="submit">Submit</Button>
       </Form>
-    </div>
+    </Container>
   )
 }
 
