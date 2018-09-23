@@ -31,10 +31,10 @@ class Dashboard extends Component {
           </div>
           <Divider section />
           <Progress indicating percent={50} active progress>
-            Active
+            available beds
           </Progress>
           <div style={styles.container}>
-            <Modal closeIcon trigger={<Button basic>request staff</Button>}>
+            <Modal closeIcon trigger={<Button basic>send patients</Button>}>
               <Modal.Content image>
                 <Modal.Description>
                   <OtherHospital />
@@ -60,7 +60,7 @@ class Dashboard extends Component {
             medical devices in use
           </Progress>
           <div style={styles.container}>
-            <Modal closeIcon trigger={<Button basic>request staff</Button>}>
+            <Modal closeIcon trigger={<Button basic>request devices</Button>}>
               <Modal.Content image>
                 <Modal.Description>
                   <OtherHospital />
