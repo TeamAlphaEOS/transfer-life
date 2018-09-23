@@ -21,7 +21,7 @@ const eos = Eos({
 
 class OtherHospital extends Component {
     click = () => {
-        toast.info("Patient sent successfully");
+        toast.info("Patient data sent successfully");
         console.log("test");
         this.handleFormEvent();
     }

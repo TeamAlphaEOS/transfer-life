@@ -18,7 +18,7 @@ class Dashboard extends Component {
           <Header size="large">Current status of EOS Hyde Park Hospital</Header>
         </div>
         <Segment>
-          <Progress indicating percent={75} active progress>
+          <Progress indicating percent={9} active progress>
             staff patient capacity
           </Progress>
           <div style={styles.container}>
